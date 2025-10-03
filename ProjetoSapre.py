@@ -208,12 +208,6 @@ def analises_avancadas(df_filtrado):
                                      color="Situação", title="Valor vs % Documentos Anexados")
             st.plotly_chart(fig_scatter, use_container_width=True)
 
-        st.subheader("📊 Análise por Núcleo")
-        analise_nucleo = df_filtrado.groupby("Núcleo").agg({
-            "Valor": ["count", "sum", "mean"],
-            "Documentos Anexados (%)": "mean"
-        }).round(2)
-        st.dataframe(analise_nucleo, use_container_width=True)
     else:
         st.info("Nenhum dado encontrado com os filtros aplicados.")
 
