@@ -207,6 +207,7 @@ def analises_avancadas(df_filtrado):
             fig_scatter = px.scatter(df_filtrado, x="Valor", y="Documentos Anexados (%)",
                                      color="Situação", title="Valor vs % Documentos Anexados")
             st.plotly_chart(fig_scatter, use_container_width=True)
+
     else:
         st.info("Nenhum dado encontrado com os filtros aplicados.")
 
